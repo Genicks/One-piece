@@ -1,0 +1,124 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial;
+    transition: ease 0.45s;
+
+}
+.cc{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: fit-content;
+    height: fit-content;
+    background-color: white;
+}
+
+.poster{
+    width: 235px;  
+    height: 305px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;  
+    background-image: url(https://img.zorores.com/_r/300x400/100/54/90/5490cb32786d4f7fef0f40d7266df532/5490cb32786d4f7fef0f40d7266df532.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+}
+
+.poster ::after{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 15%;
+    background-image: linear-gradient(transparent, #343a40);
+    opacity: .9;
+    z-index: -2;
+    transition: smooth 0.45s;
+}
+.poster:hover{
+    cursor: pointer;
+    
+}
+
+.poster:hover ::after {
+    height: 50%;
+    opacity: .6;
+}
+
+.overlay{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    opacity: 0;
+}
+
+.overlay #img{  
+    height: 50px;
+    width: 50px;
+    background-color:transparent;
+}
+
+.overlay:hover{
+    background-color: rgba(52, 58, 64, 0.7);
+    opacity: 1;
+}
+
+
+.subdub{
+    position: absolute;
+    display: flex;
+    cursor: col-resize;
+}
+.lang{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.2em;
+    margin-left: 10px;
+    background-color: #fff;
+    padding: 2px 4px;
+    border-radius: 5px;
+    color: #111;
+    cursor: pointer;
+}
+.EP{
+    margin-right: 10px;
+    background: #7bfcfc;
+}
+.poster-deatails{
+    background-color: #343a40;
+    width: 235px;
+    display: inline-block;
+    color: white;
+}
+.film-name{
+    margin: 10px 10px 1rem;
+}
+.film-duration{
+    display: flex;
+    margin: 30px 10px 1rem;
+}
+.fd{
+    margin: 0px 5px 0px ;
+    font: 12px;
+    color: #aaaaaa;
+}
+body{
+    background-color: black;
+}
